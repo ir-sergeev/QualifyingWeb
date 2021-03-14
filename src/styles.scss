@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: CeraProLight;
+    src: local("/src/fonts/CeraProLight.woff");
+}
+
+* {
+    font-size: 14px;
+    font-family: CeraProLight, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.a-nodec {
+    text-decoration: none;
+}
+
+.a-nodec-w {
+    text-decoration: none;
+    color: #fff;
+}
+
+.a-dec {
+    color: black;
+}

@@ -1,0 +1,69 @@
+.left-container {
+    min-width: 215px;
+    background-color: #fff;
+    overflow-y: auto;
+    height: 100%;
+    .left-content-root {
+        height: 100%;
+        min-height: 450px;
+        display: flex;
+        width: 220px;
+        flex-direction: column;
+        justify-content: center;
+        .logo-zone {
+            display: flex;
+            align-items: center;
+        }
+        .left-item {
+            flex-grow: 1;
+            text-align: center;
+            justify-content: center;
+            .auth-link {
+                color: #58A8A8;
+            }
+        }
+        .context-versions {
+            display: flex;
+            align-items: center;
+            min-width: 180px;
+            max-width: 200px;
+            .auth-link {
+                color: #58A8A8;
+            }
+        }
+        .change-version {
+            text-align: center;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        .in-auth {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .context-tasks {
+            display: flex;
+            flex-direction: column;
+            .task-item {
+                padding: 15px 0;
+                border-left: 3px solid #fff;
+                &:hover {
+                    border-left: 3px solid #58A8A8;
+                    background-color: rgb(88, 168, 168, 0.3);
+                    cursor: pointer;
+                    transition: 0.3s;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.left-container::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff;
+}
+
+.left-container::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #cacaca;
+}

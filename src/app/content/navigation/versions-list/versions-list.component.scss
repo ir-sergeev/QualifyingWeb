@@ -1,0 +1,29 @@
+.app-versions-container {
+    width: 100%;
+    .versions-tools {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        .tool-name {
+            font-weight: bold;
+        }
+    }
+    .versions {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        .version {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #fff;
+            &:hover {
+                border: 1px solid #58A8A8;
+                background-color: rgb(88, 168, 168, 0.3);
+                transition: 0.3s;
+                border-radius: 25%;
+                cursor: pointer;
+            }
+        }
+    }
+}
