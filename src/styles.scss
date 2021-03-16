@@ -1,13 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+// @font-face {
+//     font-family: CeraProLight;
+//     src: url("/src/fonts/CeraProLight.woff") format('woff');
+// }
 @font-face {
-    font-family: CeraProLight;
-    src: local("/src/fonts/CeraProLight.woff");
+    font-family: Untitled22;
+    src: url('/src/fonts/test6.woff2') format('woff');
+    font-feature-settings: "liga";
 }
 
 * {
     font-size: 14px;
-    font-family: CeraProLight, sans-serif;
+    font-family: Untitled22, sans-serif;
 }
 
 html,
@@ -28,4 +33,9 @@ body {
 
 .a-dec {
     color: black;
+}
+
+.inicon {
+    font-family: Untitled22 !important;
+    font-size: 16px;
 }
