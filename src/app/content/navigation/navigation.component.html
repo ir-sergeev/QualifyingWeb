@@ -1,16 +1,16 @@
 <div class="left-container">
     <div class="left-content-root">
         <div class="logo-zone left-item">
-            <span>Logo</span>
+            <span class="in-icon" style="font-size:20px">menu | {{this._navigationService.any_name}}</span>
         </div>
         <div class="context-versions left-item">
-            <app-versions-list></app-versions-list>
+            <app-versions-list *ngIf="this._navigationService._isVersionVisible"></app-versions-list>
         </div>
         <div class="context-tasks left-item">
-            <div class="task-item">
+            <div class="task-item" [ngStyle]="{'display': this._navigationService._isTasksVisible ? '' : 'none'}">
                 <span class="task-name">Задание 1</span>
             </div>
-            <div class="task-item">
+            <div class="task-item" [ngStyle]="{'display': this._navigationService._isTasksVisible ? '' : 'none'}">
                 <span class="task-name">Задание 2</span>
             </div>
         </div>
@@ -21,6 +21,7 @@
         </div>
         <div class="in-auth left-item">
             <a routerLink="/auth" class="a-nodec">
+                <span class="in-icon" style="font-size:20px; padding-right:10px;color:#58A8A8">n_profile</span>
                 <span class="auth-link">Войти</span>
             </a>
         </div>

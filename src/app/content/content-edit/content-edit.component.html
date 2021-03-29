@@ -1,1 +1,150 @@
-<p>content-edit works!</p>
+<div class="details-container">
+    <div class="context-items">
+        <div class="item">
+            <a href="" class="item-link">Работа 1</a>
+        </div>
+        <div class="item">
+            <a href="" class="item-link">Работа 2</a>
+        </div>
+        <div class="item">
+            <a href="" class="item-link">Работа 3</a>
+        </div>
+        <div class="item">
+            <a href="" class="item-link">Работа 4</a>
+        </div>
+    </div>
+    <div class="details-info-board">
+        <div>
+            <span class="details-header">Редактирование</span>
+        </div>
+        <div style="display: flex;">
+        </div>
+    </div>
+    <div class="details-content">
+        <mat-horizontal-stepper #stepper [linear]="false">
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Ввод параметров</ng-template>
+                    <div class="params-container-grid">
+                        <div class="grid-item item-header">Количество вариантов</div>
+                        <div class="grid-item">
+                            <mat-form-field>
+                                <input matInput placeholder="Введите целое число" maxlength="2" autocomplete="off">
+                            </mat-form-field>
+                        </div>
+                        <div class="grid-item item-header">Значения параметров</div>
+                        <div class="grid-item">
+                            <section class="example-section">
+                                <mat-checkbox class="example-margin" color="primary">Ручной ввод</mat-checkbox>
+                                <mat-checkbox class="example-margin" color="primary">Автоматическая генерация</mat-checkbox>
+                            </section>
+                        </div>
+                        <div class="grid-item item-header">Диапазон для i</div>
+                        <div class="grid-item grid-i">
+                            <mat-form-field class="form-field-min">
+                                <input matInput placeholder="min" autocomplete="off" maxlength="2" class="min-field-input">
+                            </mat-form-field>
+                            <div class="defis-line"></div>
+                            <mat-form-field class="form-field-min">
+                                <input matInput placeholder="max" maxlength="2" autocomplete="off" class="min-field-input">
+                            </mat-form-field>
+                        </div>
+                        <div class="grid-item item-header">Параметр рассеивания Y</div>
+                        <div class="grid-item">
+                            <mat-form-field>
+                                <input matInput placeholder="Например, 0.3" autocomplete="off" required="true">
+                            </mat-form-field>
+                        </div>
+                        <div class="grid-item item-header">Тип соотношения</div>
+                        <div class="grid-item">
+                            <section class="example-section">
+                                <mat-checkbox class="example-margin" color="primary">Ручной ввод</mat-checkbox>
+                                <mat-checkbox class="example-margin" color="primary">Автоматическое распределение</mat-checkbox>
+                            </section>
+                        </div>
+                        <div class="grid-item item-header">Нормальный закон для X</div>
+                        <div class="grid-item">
+                            <mat-form-field>
+                                <input matInput placeholder="Среднее значение" autocomplete="off" required="true">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Дисперсия" autocomplete="off" required="true">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="action-container">
+                        <a mat-button class="cancel-button" href="/context">Отменить</a>
+                        <button mat-button matStepperNext class="next-button">Далее</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Проверка параметров</ng-template>
+                    <div class="check-container-grid">
+                        <div class="grid-header header-line">Вариант</div>
+                        <div class="grid-header">Объем выборки (i)</div>
+                        <div class="grid-header  header-line">Тип соотношения</div>
+                        <div class="grid-header">Значения параметров</div>
+                        <div class="grid-header header-line">Значения X</div>
+                        <div class="grid-header header-line">Значение Y</div>
+                        <div class="grid-header-link"></div>
+                        <div class="grid-body-item">1</div>
+                        <div class="grid-body-item">24</div>
+                        <div class="grid-body-item">
+                            <mat-form-field>
+                                <mat-select placeholder="Выберите уравнение">
+                                    <mat-option value="1">ax+b</mat-option>
+                                    <mat-option value="2">ax^2 + b</mat-option>
+                                    <mat-option value="3">e^x + b</mat-option>
+                                    <mat-option value="4">ax^3 + bx^2 + cx + d</mat-option>
+                                    <mat-option value="5">a/x + b</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="grid-body-item">a = 5</div>
+                        <div class="grid-body-item">32</div>
+                        <div class="grid-body-item">12</div>
+                        <div class="grid-body-item">
+                            <a href="" class="a-nodec" style="border-bottom:1px dashed; padding-bottom:2px">Показать</a>
+                        </div>
+                        <div class="grid-body-item">1</div>
+                        <div class="grid-body-item">24</div>
+                        <div class="grid-body-item">
+                            <mat-form-field>
+                                <mat-select placeholder="Выберите уравнение">
+                                    <mat-option value="1">ax+b</mat-option>
+                                    <mat-option value="2">ax^2 + b</mat-option>
+                                    <mat-option value="3">e^x + b</mat-option>
+                                    <mat-option value="4">ax^3 + bx^2 + cx + d</mat-option>
+                                    <mat-option value="5">a/x + b</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="grid-body-item">a = 5</div>
+                        <div class="grid-body-item">32</div>
+                        <div class="grid-body-item">12</div>
+                        <div class="grid-body-item">
+                            <a href="" class="a-nodec" style="border-bottom:1px dashed; padding-bottom:2px">Показать</a>
+                        </div>
+                    </div>
+                    <div class="action-container">
+                        <a mat-button class="cancel-button" href="/context">Отменить</a>
+                        <button mat-button matStepperNext class="next-button">Далее</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="input_params">
+                <form [formGroup]="input_params">
+                    <ng-template matStepLabel>Сохранение изменений</ng-template>
+                    <div style="margin:25px 0;text-align:center">
+                        <span>Приветик</span>
+                    </div>
+                    <div class="action-container">
+                        <button mat-button matStepperNext class="next-button">Сохранить</button>
+                    </div>
+                </form>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+</div>

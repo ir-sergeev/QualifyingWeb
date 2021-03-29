@@ -1,10 +1,14 @@
     .center-content {
         padding: 20px;
-        .header-name {
+        .header-name-container {
             padding: 10px 0;
             margin: 10px;
-            font-size: 35px;
             font-weight: bold;
+            height: 2.5em;
+            line-height: 2.5em;
+            .header-name {
+                font-size: 30px;
+            }
         }
         .content-items {
             padding: 10px 0;
@@ -41,7 +45,7 @@
                 }
                 .card-link {
                     margin: 30px 0 40px 0;
-                    padding: 10px 0;
+                    // padding: 10px 0;
                     text-align: center;
                     min-width: 200px;
                     background-color: #043669;

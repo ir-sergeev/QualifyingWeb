@@ -26,7 +26,6 @@
             display: flex;
             align-items: center;
             min-width: 180px;
-            max-width: 200px;
             .auth-link {
                 color: #58A8A8;
             }
@@ -53,17 +52,20 @@
                     transition: 0.3s;
                     padding-left: 5px;
                 }
+                .task-name {
+                    color: #58A8A8;
+                }
             }
         }
     }
 }
 
 .left-container::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
     background-color: #fff;
 }
 
 .left-container::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #cacaca;
 }

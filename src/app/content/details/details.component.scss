@@ -24,25 +24,48 @@
         }
     }
     .details-info-board {
-        padding: 20px 30px;
+        padding: 15px 30px;
         background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .details-header {
-            font-size: 22px;
-            font-weight: bold;
+        .details-header-container {
+            padding: 12px 0;
+            .details-header {
+                font-size: 22px;
+                font-weight: bold;
+            }
         }
-        .edit-button {
-            padding: 15px 45px;
-            border: 1px solid #043669;
-            .edit-link {
-                color: #043669;
+        .edit-button-link {
+            padding: 5px 22px;
+            border: 1px solid;
+            .edit-link-container {
+                display: flex;
+                .edit-link-text-container {
+                    .edit-link-text {
+                        line-height: 40px;
+                    }
+                }
+                .edit-link-icon {
+                    .in-icon {
+                        font-size: 24px;
+                        margin: 0 30px 0 10px;
+                        transition: 0.4s;
+                    }
+                }
             }
             &:hover {
                 background-color: rgb(4, 54, 105, 0.1);
-                transition: 0.2s;
+                transition: 0.4s;
                 cursor: pointer;
+                .edit-link-container {
+                    .edit-link-icon {
+                        .in-icon {
+                            margin: 0 10px 0 30px;
+                            transition: 0.4s;
+                        }
+                    }
+                }
             }
         }
     }
@@ -81,6 +104,12 @@
             padding: 15px 25px;
             background-color: rgb(0, 0, 0, 0.3);
             border-radius: 5px;
+            transition: 0.4s;
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(0, 0, 0, 0.6);
+                transition: 0.4s;
+            }
         }
     }
 }

@@ -3,9 +3,33 @@
     .versions-tools {
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
         margin: 10px 0;
         .tool-name {
             font-weight: bold;
+        }
+        .tool-step {
+            display: flex;
+            .tool-stroke {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                &:hover {
+                    background-color: #ccc;
+                    cursor: pointer;
+                }
+                .in-icon {
+                    transition: 0.3s;
+                    // border: 1px solid #fff;
+                    line-height: 25px;
+                    // &:hover {
+                    //     border: 1px solid #58A8A8;
+                    //     background-color: rgb(88, 168, 168, 0.3);
+                    //     transition: 0.3s;
+                    //     cursor: pointer;
+                    // }
+                }
+            }
         }
     }
     .versions {

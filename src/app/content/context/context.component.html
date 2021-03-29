@@ -1,6 +1,6 @@
 <div class="center-content">
-    <div class="header-name">
-        Лабораторные работы
+    <div class="header-name-container">
+        <span class="header-name">Лабораторные работы</span>
     </div>
     <div class="content-items">
         <div class="item-card">
@@ -13,9 +13,9 @@
                         <span class="text-desc">Работа</span>
                     </div>
                 </div>
-                <div class="info">
+                <div class="info" [ngStyle]="{'display' : this._01LabNumber == null ? 'none' : ''}">
                     <div>
-                        <span class="text-22 text-blue">12</span>
+                        <span class="text-22 text-blue">{{this._01LabNumber}}</span>
                     </div>
                     <div>
                         <span class="text-desc text-blue">Вариант</span>
@@ -23,9 +23,9 @@
                 </div>
             </div>
             <div class="card-desc">Планы первого порядка. Дробный факторный эксперимент</div>
-            <div class="card-link">
-                <a routerLink="/content/details" style="color:#fff;text-decoration: none;">Перейти</a>
-            </div>
+            <a routerLink="/content/details" style="color:#fff;text-decoration: none;">
+                <button class="card-link" mat-button>Перейти</button>
+            </a>
         </div>
         <div class="item-card">
             <div class="card-info">
@@ -37,9 +37,9 @@
                         <span class="text-desc">Работа</span>
                     </div>
                 </div>
-                <div class="info">
+                <div class="info" [ngStyle]="{'display' : this._02LabNumber == null ? 'none' : ''}">
                     <div>
-                        <span class="text-22 text-blue">2</span>
+                        <span class="text-22 text-blue">{{this._02LabNumber}}</span>
                     </div>
                     <div>
                         <span class="text-desc text-blue">Вариант</span>
@@ -47,9 +47,10 @@
                 </div>
             </div>
             <div class="card-desc">Дисперсионный анализ</div>
-            <div class="card-link">
-                <a routerLink="/content/details" style="color:#fff;text-decoration: none;">Перейти</a>
-            </div>
+
+            <a routerLink="/content/details" style="color:#fff;text-decoration: none;">
+                <button class="card-link" mat-button>Перейти</button>
+            </a>
         </div>
         <div class="item-card">
             <div class="card-info">
@@ -61,9 +62,9 @@
                         <span class="text-desc">Работа</span>
                     </div>
                 </div>
-                <div class="info">
+                <div class="info" [ngStyle]="{'display' : this._03LabNumber == null ? 'none' : ''}">
                     <div>
-                        <span class="text-22 text-blue">19</span>
+                        <span class="text-22 text-blue">{{this._03LabNumber}}</span>
                     </div>
                     <div>
                         <span class="text-desc text-blue">Вариант</span>
@@ -71,9 +72,10 @@
                 </div>
             </div>
             <div class="card-desc">Дисперсионный анализ</div>
-            <div class="card-link">
-                <a routerLink="/content/details" style="color:#fff;text-decoration: none;">Перейти</a>
-            </div>
+
+            <a routerLink="/content/details" style="color:#fff;text-decoration: none;">
+                <button class="card-link" mat-button>Перейти</button>
+            </a>
         </div>
         <div class="item-card">
             <div class="card-info">
@@ -85,9 +87,9 @@
                         <span class="text-desc">Работа</span>
                     </div>
                 </div>
-                <div class="info">
+                <div class="info" [ngStyle]="{'display' : this._04LabNumber == null ? 'none' : ''}">
                     <div>
-                        <span class="text-22 text-blue">11</span>
+                        <span class="text-22 text-blue">{{this._04LabNumber}}</span>
                     </div>
                     <div>
                         <span class="text-desc text-blue">Вариант</span>
@@ -95,9 +97,11 @@
                 </div>
             </div>
             <div class="card-desc">Дисперсионный анализ</div>
-            <div class="card-link">
-                <a routerLink="/content/details" style="color:#fff;text-decoration: none;">Перейти</a>
-            </div>
+            <a routerLink="/content/details" style="color:#fff;text-decoration: none;">
+                <button class="card-link" mat-button>
+                    Перейти
+                </button>
+            </a>
         </div>
     </div>
 </div>

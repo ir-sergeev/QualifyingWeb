@@ -1,25 +1,44 @@
 <div class="details-container">
     <div class="context-items">
         <div class="item">
-            <a href="" class="item-link">Работа 1 (5)</a>
+            <a href="" class="item-link">
+                <span>Работа 1</span>
+                <span *ngIf="this._01LabNumber"> ({{this._01LabNumber}}) </span>
+            </a>
         </div>
         <div class="item">
-            <a href="" class="item-link">Работа 2 (43)</a>
+            <a href="" class="item-link">
+                <span>Работа 2</span>
+                <span *ngIf="this._02LabNumber"> ({{this._02LabNumber}}) </span>
+            </a>
         </div>
         <div class="item">
-            <a href="" class="item-link">Работа 3 (29)</a>
+            <a href="" class="item-link">
+                <span>Работа 3</span>
+                <span *ngIf="this._03LabNumber"> ({{this._03LabNumber}}) </span>
+            </a>
         </div>
         <div class="item">
-            <a href="" class="item-link">Работа 4 (12)</a>
+            <a href="" class="item-link">
+                <span>Работа 4</span>
+                <span *ngIf="this._04LabNumber"> ({{this._04LabNumber}}) </span>
+            </a>
         </div>
     </div>
     <div class="details-info-board">
-        <div>
+        <div class="details-header-container">
             <span class="details-header">Лабораторная работа</span>
         </div>
-        <div class="edit-button">
-            <span class="edit-link"> <a routerLink="/content/context-edit" class="a-nodec">Редактировать</a></span>
-        </div>
+        <a routerLink="/content/context-edit" class="a-nodec edit-button-link" mat-button *ngIf="!this._authService.isStudent">
+            <div class="edit-link-container">
+                <div class="edit-link-text-container">
+                    <span class="edit-link-text">Редактировать</span>
+                </div>
+                <div class="edit-link-icon">
+                    <span class="in-icon">n_right</span>
+                </div>
+            </div>
+        </a>
     </div>
     <div class="details-content">
         <div>
@@ -62,8 +81,7 @@
             </div>
         </div>
         <div class="download-button">
-            <span>Скачать в .txt</span>
+            <span style="color:#fff">Скачать в .txt</span>
         </div>
     </div>
-
 </div>

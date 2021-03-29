@@ -1,0 +1,65 @@
+<div mat-dialog-content class="dialog-container">
+    <div class="dialog-header">
+        <p mat-dialog-title>Выберите варианты лабораторных работ</p>
+    </div>
+    <div>
+        <div>
+            <span style="font-weight: bold;">Работа 1</span>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-select placeholder="Выберите вариант" [(ngModel)]="data._01versionNumber" [required]="true">
+                    <mat-option *ngFor="let item of this.versionsMock" [value]="item.id">
+                        Вариант {{item.id}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div>
+        <div>
+            <span style="font-weight: bold;">Работа 2</span>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-select placeholder="Выберите вариант" [(ngModel)]="data._02versionNumber" [required]="true">
+                    <mat-option *ngFor="let item of this.versionsMock" [value]="item.id">
+                        Вариант {{item.id}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div>
+        <div>
+            <span style="font-weight: bold;">Работа 3</span>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-select placeholder="Выберите вариант" [(ngModel)]="data._03versionNumber" [required]="true">
+                    <mat-option *ngFor="let item of this.versionsMock" [value]="item.id">
+                        Вариант {{item.id}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div>
+        <div>
+            <span style="font-weight: bold;">Работа 4</span>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-select placeholder="Выберите вариант" [(ngModel)]="data._04versionNumber" [required]="true">
+                    <mat-option *ngFor="let item of this.versionsMock" [value]="item.id">
+                        Вариант {{item.id}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+
+<div mat-dialog-actions class="bottom-button">
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="save-button" (click)="StudentLogin()">Решить</button>
+</div>
